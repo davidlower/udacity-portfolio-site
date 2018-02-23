@@ -1,0 +1,151 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   --p-color: #02b3e4;
+   --s-color: #2d3c49;
+   --t-color: #7d97ad;
+   color: var(--s-color);
+
+   font-family: 'Raleway', sans-serif;
+}
+
+header, .featured, .hero, hr {
+   width: 90%;
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+/* ****************************************
+HEADER SECTION
+**************************************** */
+
+header {
+   display: grid;
+
+   margin-top: 70px;
+
+   grid-template-columns: 100px 1fr;
+}
+
+.logo {
+   width: 100px;
+   height: auto;
+}
+
+header .text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   text-align: right;
+}
+
+.text-container h1 {
+   text-transform: uppercase;
+
+   font-size: 5rem;
+   font-weight: 100;
+}
+
+.text-container p {
+   text-transform: uppercase;
+
+   font-size: 2rem;
+   font-weight: 700;
+}
+
+hr {
+   height: 6px;
+   margin: 50px auto;
+
+   background-color: var(--t-color);
+}
+
+/* ****************************************
+FEATURED SECTION
+**************************************** */
+
+.featured-grid {
+   display: grid;
+
+   width: 100%;
+   margin-bottom: 70px;
+
+   text-align: center;
+
+   grid-gap: 20px;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hero img, .featured-grid img {
+   width: 100%;
+   height: auto;
+}
+
+.featured-grid img {
+   max-width: 450px;
+}
+
+.featured h2 {
+   margin: 50px 0 25px;
+
+   color: var(--t-color);
+
+   font-size: 2.4rem;
+   font-weight: 400;
+}
+
+.featured h3 {
+   margin: 8px 0;
+
+   text-transform: uppercase;
+
+   font-size: 2.7rem;
+   font-weight: 400;
+}
+
+/* ****************************************
+MEDIA QUERIES
+**************************************** */
+
+@media screen and (max-width: 1000px) {
+   header, .featured, .hero, hr {
+      width: 80%;
+   }
+   .featured-grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media screen and (max-width: 850px) {
+   html {
+      font-size: 11px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   header {
+      margin: 0 auto;
+
+      grid-template-columns: 1fr;
+   }
+   header .text-container {
+      text-align: left;
+   }
+   .logo {
+      width: 40px;
+      margin: 3rem 0;
+
+      justify-self: center;
+   }
+   .featured-grid {
+      grid-template-columns: 1fr;
+   }
+   .featured h3 {
+      margin: 4px 0;
+   }
+}
